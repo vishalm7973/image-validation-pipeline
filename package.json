@@ -1,0 +1,7 @@
+{
+  "name": "aragon-image-validation",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {"dev": "concurrently -n api,worker,web -c blue,green,magenta "npm run dev:api" "npm run dev:worker" "npm run dev:web"", "dev:api": "npm --prefix backend run dev:api", "dev:worker": "npm --prefix backend run dev:worker", "dev:web": "npm --prefix frontend run dev", "build": "npm --prefix backend run build && npm --prefix frontend run build", "db:generate": "npm --prefix backend run db:generate", "db:migrate": "npm --prefix backend run db:migrate"},
+  "devDependencies": {"concurrently":"^9.1.2"}
+}
